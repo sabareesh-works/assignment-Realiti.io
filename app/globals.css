@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: #f4f5f7;
+  color: #172b4d;
+}
+.dark body {
+  background: #1d2125;
+  color: #dee4ea;
+}
+
+/* thin scrollbars */
+*::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+*::-webkit-scrollbar-thumb {
+  background: #c1c7d0;
+  border-radius: 8px;
+}
+.dark *::-webkit-scrollbar-thumb {
+  background: #454f59;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* card enter animation */
+@keyframes pop-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px) scale(0.99);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.card-enter {
+  animation: pop-in 0.22s ease-out;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.modal-bg {
+  animation: fade-in 0.18s ease-out;
+}
+
+/* guided-tour hand gestures */
+@keyframes tour-tap {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(0.78); }
+}
+.tour-tap {
+  animation: tour-tap 1.1s ease-in-out infinite;
+}
+
+@keyframes tour-drag-x {
+  0%, 100% { transform: translateX(-10px); }
+  50% { transform: translateX(46px); }
+}
+.tour-drag {
+  animation: tour-drag-x 1.6s ease-in-out infinite;
+}
