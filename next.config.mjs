@@ -3,8 +3,8 @@ const isProd = process.env.NODE_ENV === "production";
 
 const nextConfig = {
   output: "export",
-  basePath: isProd ? "/realiti.io-assignment" : "",
-  assetPrefix: isProd ? "/realiti.io-assignment/" : "",
+  basePath: isProd ? "/assignment-Realiti.io" : "",
+  assetPrefix: isProd ? "/assignment-Realiti.io/" : "",
   trailingSlash: true,
   images: { unoptimized: true },
   staticPageGenerationTimeout: 300,
